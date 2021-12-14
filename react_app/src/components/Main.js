@@ -1,9 +1,12 @@
 import React from "react";
+import Anime from "./mainComps/Anime";
 
-const Main = () => {
+const Main = (props) => {
   return (
     <div className="main">
-      <div className="anime">anime</div>
+      <div className="anime">
+        <Anime animeData={props.animeData} />
+      </div>
       <div className="music">music</div>
     </div>
   );

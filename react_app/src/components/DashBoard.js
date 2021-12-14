@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { mainPgActions } from "../store/mainPg";
 import Main from "./Main";
 import SideBar from "./SideBar";
 import TopBar from "./TopBar";
 
 const DashBoard = () => {
+  const dispatch = useDispatch();
+  const storeAnimeData = useSelector((state) => state.mainPg.animeData);
+
+  useEffect(() => {
+    const fetchAnime = async () => {
+      const res = await fetch(
+        "https://jikan1.p.rapidapi.com/top/anime/1/upcoming",
+        {
+          method: "GET",
+          headers: {
+            "x-rapidapi-host": "jikan1.p.rapidapi.com",
+            "x-rapidapi-key":
+              "12a773075amsh8d41c0d94670d2cp1672adjsna2f437ece9ab",
+          },
+        }
+      );
+      const data = await res.json();
+
+      return data.top;
+    };
+    const handleAnimeData = async () => {
+      const receivedData = await fetchAnime();
+      dispatch(mainPgActions.fetchAnimeData(receivedData));
+    };
+    handleAnimeData();
+  }, []);
+
   return (
     <div className="container">
       <div className="row">
@@ -18,7 +48,7 @@ const DashBoard = () => {
             <TopBar />
           </div>
           <div className="row">
-            <Main />
+            <Main animeData={storeAnimeData} />
           </div>
         </div>
       </div>

@@ -2,10 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const mainPgSlice = createSlice({
   name: "mainPg",
-  initialState: { othername: "" },
+  initialState: { animeData: [] },
   reducers: {
-    setOtherName(state, action) {
-      state.othername = action.payload;
+    fetchAnimeData(state, action) {
+      state.animeData = action.payload;
     },
   },
 });
