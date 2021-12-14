@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const userSlice = createSlice({
-  name: "user",
+const topBarSlice = createSlice({
+  name: "topBar",
   initialState: { username: "", auth: false },
   reducers: {
     login(state, action) {
@@ -15,6 +15,6 @@ const userSlice = createSlice({
   },
 });
 
-export const userActions = userSlice.actions;
+export const topBarActions = topBarSlice.actions;
 
-export default userSlice.reducer;
+export default topBarSlice.reducer;

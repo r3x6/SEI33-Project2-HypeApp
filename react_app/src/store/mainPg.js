@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const otherSlice = createSlice({
-  name: "other",
+const mainPgSlice = createSlice({
+  name: "mainPg",
   initialState: { othername: "" },
   reducers: {
     setOtherName(state, action) {
@@ -10,6 +10,6 @@ const otherSlice = createSlice({
   },
 });
 
-export const otherActions = otherSlice.actions;
+export const mainPgActions = mainPgSlice.actions;
 
-export default otherSlice.reducer;
+export default mainPgSlice.reducer;

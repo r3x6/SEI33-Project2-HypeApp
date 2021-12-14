@@ -1,10 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import userReducer from "./user";
-import otherReducer from "./other";
+import topBarReducer from "./topBar";
+import sideBarReducer from "./sideBar";
+import mainPgReducer from "./mainPg";
 
 const store = configureStore({
-  reducer: { user: userReducer, other: otherReducer },
+  reducer: {
+    topBar: topBarReducer,
+    sideBar: sideBarReducer,
+    mainPg: mainPgReducer,
+  },
 });
 
 export default store;
