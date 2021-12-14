@@ -11,25 +11,59 @@ body {
   width: 78vw;
 }
 .sideBar {
-  background-color: #0b3142;
+  background-color: #335c67;
   color: whitesmoke;
   height: 97vh;
   border-radius: 20px 0 0 20px;
 }
+.title {
+  background-color: #9aa899;
+  height: 10vh;
+  border-radius: 20px 0 0 0;
+  font-family: "Brush Script MT", cursive;
+  font-size: 50px;
+  padding-top: 8px;
+  color: #540b0e;
+}
 
 .topBar {
-  background-color: #9c92a3;
+  background-color: #9e2a2b;
   height: 10vh;
   width: 100vw;
   border-radius: 0 20px 0 0;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+input,
+button {
+  margin: 20px;
+  border-radius: 10px;
 }
 
 .main {
-  background-color: #d6d3f0;
+  background-color: #fff3b0;
   height: 87vh;
   width: 100vw;
   border-radius: 0 0 20px 0;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
 }
 .col-sm-3 {
   padding: 0px;
+}
+.anime,
+.music {
+  background-color: #e09f3e;
+  float: none;
+  border-radius: 10px;
+  margin: 30px;
+  height: 30%;
+}
+li {
+  list-style-type: none;
+}
+ul {
+  margin-top: 20px;
+  text-align: left;
 }
