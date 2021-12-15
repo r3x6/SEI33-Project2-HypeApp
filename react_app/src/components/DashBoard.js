@@ -24,7 +24,6 @@ const DashBoard = () => {
         }
       );
       const data = await res.json();
-
       return data.top;
     };
     const handleAnimeData = async () => {

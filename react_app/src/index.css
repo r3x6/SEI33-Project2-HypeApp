@@ -11,7 +11,7 @@ body {
   width: 78vw;
 }
 .sideBar {
-  background-color: #335c67;
+  background-color: #ff6b6b;
   color: whitesmoke;
   height: 97vh;
   border-radius: 20px 0 0 20px;
@@ -44,10 +44,12 @@ button {
   background-color: #fff3b0;
   height: 87vh;
   width: 100vw;
+  overflow: hidden;
   border-radius: 0 0 20px 0;
   display: grid;
-  gap: 10px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
+
+  padding: 10px;
 }
 .col-sm-3 {
   padding: 0px;
@@ -57,9 +59,90 @@ button {
   background-color: #e09f3e;
   float: none;
   border-radius: 10px;
-  margin: 30px;
-  height: 30%;
+  margin: 7px;
+  height: 39vh;
+  text-align: left;
 }
+.animeTop {
+  background: lightcoral;
+  width: inherit;
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
+  font-weight: bolder;
+  font-size: 80%;
+}
+.animeBot {
+  overflow: scroll;
+  scrollbar-width: none;
+  width: inherit;
+  height: 100%;
+  position: relative;
+  animation-name: autoScroll;
+}
+
+.trendingAnimeBox {
+  position: absolute;
+  display: flex;
+  animation-name: autoScroll;
+  animation-duration: 16s;
+
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes autoScroll {
+  0% {
+    left: 0%;
+  }
+  10% {
+    left: 0%;
+  }
+  90% {
+    left: -260%;
+  }
+  100% {
+    left: -260%;
+  }
+}
+.trendingAnime {
+  background-color: black;
+  border-radius: 10px;
+  list-style-type: inherit;
+  width: 12vw;
+  height: fit-content;
+  margin: 5px;
+  padding: 0px;
+  transition: width 0.3s;
+}
+.trendingAnime:hover {
+  width: 15vw;
+  z-index: 1;
+}
+.animeRank {
+  font-size: 80%;
+  margin: 0 0 0 5px;
+  color: whitesmoke;
+}
+a {
+  width: inherit;
+}
+img {
+  width: inherit;
+}
+.animeTitle {
+  font-size: 60%;
+  width: inherit;
+  margin: 0;
+}
+
+p {
+  padding: 0px;
+  margin: 5px;
+}
+a {
+  text-align: center;
+}
+
 li {
   list-style-type: none;
   font-size: 13px;
@@ -71,7 +154,4 @@ ul {
 ol {
   margin-top: 20px;
   text-align: left;
-}
-.trendingAnime {
-  list-style-type: inherit;
 }
