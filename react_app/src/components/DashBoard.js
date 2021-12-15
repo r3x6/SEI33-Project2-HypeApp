@@ -13,7 +13,7 @@ const DashBoard = () => {
   useEffect(() => {
     const fetchAnime = async () => {
       const res = await fetch(
-        "https://jikan1.p.rapidapi.com/top/anime/1/upcoming",
+        "https://jikan1.p.rapidapi.com/top/anime/1/airing",
         {
           method: "GET",
           headers: {
@@ -31,6 +31,18 @@ const DashBoard = () => {
       dispatch(mainPgActions.fetchAnimeData(receivedData));
     };
     handleAnimeData();
+
+    // const fetchMusic = async () => {
+    //   const res = await fetch("https://api.deezer.com/chart");
+    //   const data = await res.json();
+    //   console.log(data);
+    //   return data.top;
+    // };
+    // const handleMusicData = async () => {
+    //   const receivedData = await fetchMusic();
+    //   dispatch(mainPgActions.fetchMusicData(receivedData));
+    // };
+    // handleMusicData();
   }, []);
 
   return (
