@@ -45,7 +45,6 @@ button {
   background-color: #3c4042;
   height: 87vh;
   width: 100vw;
-  overflow: hidden;
   border-radius: 0 0 20px 0;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -98,24 +97,24 @@ button {
     left: 0%;
   }
   90% {
-    left: -260%;
+    left: -190%;
   }
   100% {
-    left: -260%;
+    left: -190%;
   }
 }
 .trendingAnime {
   background-color: black;
   border-radius: 10px;
   list-style-type: inherit;
-  width: 12vw;
+  width: 10vw;
   height: fit-content;
   margin: 5px;
   padding: 0px;
   transition: width 0.3s;
 }
 .trendingAnime:hover {
-  width: 15vw;
+  width: 12vw;
   z-index: 1;
 }
 .animeRank {
@@ -125,6 +124,7 @@ button {
 }
 a {
   width: inherit;
+  color: #ea80fc;
 }
 img {
   width: inherit;
