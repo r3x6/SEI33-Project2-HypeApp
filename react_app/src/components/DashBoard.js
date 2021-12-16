@@ -8,6 +8,7 @@ import Search from "./Search";
 import Profile from "./Profile";
 import SideBar from "./SideBar";
 import TopBar from "./TopBar";
+import Settings from "./Settings";
 
 const DashBoard = () => {
   const dispatch = useDispatch();
@@ -121,6 +122,7 @@ const DashBoard = () => {
               />
               <Route path="/search/:item" element={<Search />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/settings" element={<Settings />} />
             </Routes>
           </div>
         </div>

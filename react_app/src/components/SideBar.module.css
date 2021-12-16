@@ -11,11 +11,13 @@
   margin: 0 1rem;
   width: 10rem;
   line-height: 5rem;
+  transition: transform 0.5s;
 }
 
 .sideBar a {
   color: white;
-  text-decoration: none;
+  background-color: #202124;
+  transition: font-size 0.5s;
 }
 
 .sideBar a:hover,
@@ -24,4 +26,9 @@
   color: whitesmoke;
   padding-bottom: 0.25rem;
   border-bottom: 4px solid whitesmoke;
+  font-size: 3vh;
+}
+.sideBar li:hover,
+.sideBar li:active {
+  transform: translate(1.6vw, 1.6vh);
 }
