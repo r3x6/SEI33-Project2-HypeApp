@@ -4,7 +4,7 @@ const DisplayBox1 = (props) => {
   const top = props.data.filter((x) => x.rank <= 11);
   let topList = top.map((x, index) => {
     return (
-      <div className="trending" key={index}>
+      <div className="trending">
         <p className="rank">Rank: {x.rank}</p>
         <a href={x.url}>
           <img src={x.image_url} alt="" />

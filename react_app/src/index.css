@@ -2,7 +2,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family: "Copperplate";
+  font-family: "Shippori Antique B1", sans-serif;
 }
 .container {
   margin: 10px;
@@ -24,7 +24,7 @@ body {
   font-family: "Brush Script MT", cursive;
   font-size: 50px;
   padding-top: 8px;
-  color: #ffb2ff;
+  color: #d92121;
 }
 
 .topBar {
@@ -63,12 +63,12 @@ button {
   text-align: left;
 }
 .boxTop {
-  background: #ea80fc;
+  background: #b02727;
   width: inherit;
   border-radius: 10px 10px 0 0;
   padding: 10px;
   font-weight: bolder;
-  font-size: 80%;
+  font-size: 1vw;
 }
 .boxBot {
   overflow: scroll;
@@ -106,7 +106,7 @@ button {
   transition: width 0.3s;
 }
 .trending:hover {
-  width: 12vw;
+  width: 11vw;
   z-index: 1;
 }
 .rank {
@@ -116,13 +116,13 @@ button {
 }
 a {
   width: inherit;
-  color: #ea80fc;
+  color: #f20707;
 }
 img {
   width: inherit;
 }
 .trendingTitle {
-  font-size: 0.8vw;
+  font-size: 0.7vw;
   width: inherit;
   margin: 0;
 }

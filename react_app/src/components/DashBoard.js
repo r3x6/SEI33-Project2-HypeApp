@@ -74,7 +74,6 @@ const DashBoard = () => {
         const data = await res.json();
         movArr.push(data.results);
       }
-      console.log(movArr);
       return movArr;
     };
 
