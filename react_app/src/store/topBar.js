@@ -4,13 +4,15 @@ const topBarSlice = createSlice({
   name: "topBar",
   initialState: { input: "", searchItems: [] },
   reducers: {
-    login(state, action) {
-      state.username = action.payload;
-      state.auth = true;
+    inputChange(state, action) {
+      state.input = action.payload;
     },
-    logout(state) {
-      state.username = "";
-      state.auth = false;
+    searchSubmit(state, action) {
+      const filteredArr = action.payload.allData.filter((x) =>
+        x.title.toLowerCase().includes(action.payload.searchInput)
+      );
+      console.log(filteredArr);
+      state.searchItems = filteredArr;
     },
   },
 });

@@ -19,16 +19,16 @@ body {
 }
 .title {
   background-color: #202124;
-  height: 10vh;
+  height: 15vh;
   border-radius: 20px 0 0 0;
   font-family: "Brush Script MT", cursive;
-  font-size: 50px;
+  font-size: 10vh;
   padding-top: 8px;
   color: #d92121;
 }
 
 .topBar {
-  background-color: #606368;
+  background-color: #878c92;
   height: 10vh;
   width: 100vw;
   border-radius: 0 20px 0 0;
@@ -68,7 +68,7 @@ button {
   border-radius: 10px 10px 0 0;
   padding: 10px;
   font-weight: bolder;
-  font-size: 1vw;
+  font-size: 1.1vw;
 }
 .boxBot {
   overflow: scroll;
@@ -116,7 +116,8 @@ button {
 }
 a {
   width: inherit;
-  color: #f20707;
+  color: red;
+  text-align: center;
 }
 img {
   width: inherit;
@@ -131,9 +132,6 @@ p {
   padding: 0px;
   margin: 5px;
 }
-a {
-  text-align: center;
-}
 
 li {
   list-style-type: none;
@@ -146,6 +144,9 @@ ul {
 ol {
   margin-top: 20px;
   text-align: left;
+}
+button {
+  background-color: #b83535;
 }
 
 .centered {
@@ -169,8 +170,8 @@ ol {
   height: 64px;
   margin: 8px;
   border-radius: 50%;
-  border: 6px solid red;
-  border-color: red transparent red transparent;
+  border: 6px solid #b83535;
+  border-color: #b83535 transparent #b83535 transparent;
   animation: spinner 1.2s linear infinite;
 }
 
@@ -181,4 +182,51 @@ ol {
   100% {
     transform: rotate(360deg);
   }
+}
+.searchContainer {
+  background-color: #3c4042;
+  height: 87vh;
+  width: 100vw;
+  border-radius: 0 0 20px 0;
+  display: grid;
+  grid-template-columns: 100%;
+  padding: 10px;
+  overflow-y: scroll;
+}
+.buttonNav {
+  width: fit-content;
+  height: fit-content;
+}
+.searchPara {
+  text-align: left;
+  color: whitesmoke;
+}
+.searchResults {
+  background-color: #606368;
+  float: none;
+  border-radius: 10px;
+  margin: 7px;
+  padding: 5px;
+  height: 37vh;
+  text-align: left;
+}
+.searchResults:hover {
+  background-color: black;
+}
+.searchA {
+  display: flex;
+}
+a:hover {
+  color: whitesmoke;
+}
+.searchImg {
+  height: 35vh;
+  flex: 1;
+}
+.searchTitle {
+  flex: 3;
+  text-align: left;
+  margin-left: 12px;
+  font-size: 1.7vw;
+  font-weight: bolder;
 }
