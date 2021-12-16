@@ -1,13 +1,21 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
+import { topBarActions } from "../store/topBar";
 
 const Search = () => {
-  const params = useParams();
+  const dispatch = useDispatch();
   const storeSearchItems = useSelector((state) => state.topBar.searchItems);
+  const handleWatchList = (e) => {
+    const showId = e.target.parentElement.id;
+    const show = { ...storeSearchItems[showId] };
+    dispatch(topBarActions.saveWatchList(show));
+  };
+  const params = useParams();
+
   const searchResults = storeSearchItems.map((x, index) => {
     return (
-      <div className="searchResults" key={index}>
+      <div className="searchResults" id={index} key={index}>
         <a
           className="searchA"
           href={x.hasOwnProperty("trailer") ? x.trailer : x.url}
@@ -29,6 +37,9 @@ const Search = () => {
             {"Type: " + x.type}
           </p>
         </a>
+        <button onClick={handleWatchList} className="watchListButton">
+          Add to watchlist
+        </button>
       </div>
     );
   });

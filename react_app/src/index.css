@@ -22,7 +22,7 @@ body {
   height: 15vh;
   border-radius: 20px 0 0 0;
   font-family: "Brush Script MT", cursive;
-  font-size: 10vh;
+  font-size: 7vh;
   padding-top: 8px;
   color: #d92121;
 }
@@ -209,6 +209,14 @@ button {
   padding: 5px;
   height: 37vh;
   text-align: left;
+  position: relative;
+}
+.watchListButton {
+  position: absolute;
+  width: fit-content;
+  left: 70%;
+  top: 70%;
+  z-index: 1;
 }
 .searchResults:hover {
   background-color: black;
@@ -260,7 +268,6 @@ a:hover {
 }
 .mediaData {
   font-size: 5vh;
-  line-height: 42vh;
   float: none;
   color: whitesmoke;
   width: 100%;

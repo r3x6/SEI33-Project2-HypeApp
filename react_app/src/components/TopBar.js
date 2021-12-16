@@ -23,6 +23,7 @@ const TopBar = () => {
       ...storePopMovData,
       ...storePopTvData,
     ];
+    document.querySelector("input").value = "";
     const payload = { searchInput: storeSearchInput, allData: allData };
     dispatch(topBarActions.searchSubmit(payload));
   };
