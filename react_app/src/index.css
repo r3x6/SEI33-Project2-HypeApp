@@ -54,8 +54,7 @@ button {
 .col-sm-3 {
   padding: 0px;
 }
-.anime,
-.music {
+.displayBox {
   background-color: #606368;
   float: none;
   border-radius: 10px;
@@ -63,7 +62,7 @@ button {
   height: 39vh;
   text-align: left;
 }
-.animeTop {
+.boxTop {
   background: #ea80fc;
   width: inherit;
   border-radius: 10px 10px 0 0;
@@ -71,21 +70,20 @@ button {
   font-weight: bolder;
   font-size: 80%;
 }
-.animeBot {
+.boxBot {
   overflow: scroll;
   scrollbar-width: none;
   width: inherit;
   height: 100%;
   position: relative;
-  animation-name: autoScroll;
 }
 
-.trendingAnimeBox {
+.trendingBox {
   position: absolute;
   display: flex;
   animation-name: autoScroll;
-  animation-duration: 5s;
-  animation-direction: alternate;
+  animation-duration: 100s;
+  animation-direction: normal;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -93,17 +91,11 @@ button {
   0% {
     left: 0%;
   }
-  10% {
-    left: 0%;
-  }
-  90% {
-    left: -220%;
-  }
   100% {
-    left: -220%;
+    left: -1100%;
   }
 }
-.trendingAnime {
+.trending {
   background-color: black;
   border-radius: 10px;
   list-style-type: inherit;
@@ -113,12 +105,12 @@ button {
   padding: 0px;
   transition: width 0.3s;
 }
-.trendingAnime:hover {
+.trending:hover {
   width: 12vw;
   z-index: 1;
 }
-.animeRank {
-  font-size: 80%;
+.rank {
+  font-size: 1vw;
   margin: 0 0 0 5px;
   color: whitesmoke;
 }
@@ -129,8 +121,8 @@ a {
 img {
   width: inherit;
 }
-.animeTitle {
-  font-size: 60%;
+.trendingTitle {
+  font-size: 0.8vw;
   width: inherit;
   margin: 0;
 }
@@ -154,4 +146,39 @@ ul {
 ol {
   margin-top: 20px;
   text-align: left;
+}
+
+.centered {
+  margin: 3rem auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.spinner:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid red;
+  border-color: red transparent red transparent;
+  animation: spinner 1.2s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

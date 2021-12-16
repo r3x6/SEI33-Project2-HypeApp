@@ -1,20 +1,14 @@
 import React from "react";
-import DisplayBox from "./DisplayBox";
+import DisplayBox1 from "./DisplayBox1";
+import DisplayBox2 from "./DisplayBox2";
 
 const Main = (props) => {
   return (
     <div className="main">
-      <DisplayBox
-        animeTvData={props.animeTvData}
-        innerTxt="Trending Anime Tv Series"
-      />
-      <DisplayBox
-        animeTvData={props.animeMovData}
-        innerTxt="Trending Anime Movies"
-      />
-
-      <div className="music">music</div>
-      <div className="music">music</div>
+      <DisplayBox1 data={props.animeTvData} innerTxt="Trending Anime Series" />
+      <DisplayBox2 data={props.popTvData} innerTxt="Trending Popular Series" />
+      <DisplayBox2 data={props.popMovData} innerTxt="Trending Popular Movies" />
+      <DisplayBox1 data={props.animeMovData} innerTxt="Trending Anime Movies" />
     </div>
   );
 };
