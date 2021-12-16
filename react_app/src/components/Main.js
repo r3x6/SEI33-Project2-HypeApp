@@ -1,11 +1,18 @@
 import React from "react";
-import Anime from "./mainComps/Anime";
+import DisplayBox from "./DisplayBox";
 
 const Main = (props) => {
   return (
     <div className="main">
-      <Anime animeData={props.animeData} />
-      <div className="music">music</div>
+      <DisplayBox
+        animeTvData={props.animeTvData}
+        innerTxt="Trending Anime Tv Series"
+      />
+      <DisplayBox
+        animeTvData={props.animeMovData}
+        innerTxt="Trending Anime Movies"
+      />
+
       <div className="music">music</div>
       <div className="music">music</div>
     </div>

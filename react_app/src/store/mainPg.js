@@ -2,13 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const mainPgSlice = createSlice({
   name: "mainPg",
-  initialState: { animeData: [], musicData: [] },
+  initialState: { animeTvData: [], animeMovData: [] },
   reducers: {
-    fetchAnimeData(state, action) {
-      state.animeData = action.payload;
+    fetchAnimeTvData(state, action) {
+      state.animeTvData = action.payload;
     },
-    fetchMusicData(state, action) {
-      state.musicData = action.payload;
+    fetchAnimeMovData(state, action) {
+      state.animeMovData = action.payload;
     },
   },
 });

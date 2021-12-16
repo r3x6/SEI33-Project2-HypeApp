@@ -84,7 +84,7 @@ button {
   position: absolute;
   display: flex;
   animation-name: autoScroll;
-  animation-duration: 16s;
+  animation-duration: 5s;
   animation-direction: alternate;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -97,10 +97,10 @@ button {
     left: 0%;
   }
   90% {
-    left: -190%;
+    left: -220%;
   }
   100% {
-    left: -190%;
+    left: -220%;
   }
 }
 .trendingAnime {

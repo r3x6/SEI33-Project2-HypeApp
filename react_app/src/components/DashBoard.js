@@ -8,12 +8,13 @@ import TopBar from "./TopBar";
 
 const DashBoard = () => {
   const dispatch = useDispatch();
-  const storeAnimeData = useSelector((state) => state.mainPg.animeData);
+  const storeAnimeTvData = useSelector((state) => state.mainPg.animeTvData);
+  const storeAnimeMovData = useSelector((state) => state.mainPg.animeMovData);
 
   useEffect(() => {
-    const fetchAnime = async () => {
+    const fetchAnime = async (para) => {
       const res = await fetch(
-        "https://jikan1.p.rapidapi.com/top/anime/1/airing",
+        `https://jikan1.p.rapidapi.com/top/anime/1/${para}`,
         {
           method: "GET",
           headers: {
@@ -26,23 +27,16 @@ const DashBoard = () => {
       const data = await res.json();
       return data.top;
     };
-    const handleAnimeData = async () => {
-      const receivedData = await fetchAnime();
-      dispatch(mainPgActions.fetchAnimeData(receivedData));
+    const handleAnimeTvData = async () => {
+      const receivedData = await fetchAnime("tv");
+      dispatch(mainPgActions.fetchAnimeTvData(receivedData));
     };
-    handleAnimeData();
-
-    // const fetchMusic = async () => {
-    //   const res = await fetch("https://api.deezer.com/chart");
-    //   const data = await res.json();
-    //   console.log(data);
-    //   return data.top;
-    // };
-    // const handleMusicData = async () => {
-    //   const receivedData = await fetchMusic();
-    //   dispatch(mainPgActions.fetchMusicData(receivedData));
-    // };
-    // handleMusicData();
+    handleAnimeTvData();
+    const handleAnimeMovData = async () => {
+      const receivedData = await fetchAnime("movie");
+      dispatch(mainPgActions.fetchAnimeMovData(receivedData));
+    };
+    handleAnimeMovData();
   }, []);
 
   return (
@@ -59,7 +53,10 @@ const DashBoard = () => {
             <TopBar />
           </div>
           <div className="row">
-            <Main animeData={storeAnimeData} />
+            <Main
+              animeTvData={storeAnimeTvData}
+              animeMovData={storeAnimeMovData}
+            />
           </div>
         </div>
       </div>
