@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Route, Navigate, Routes } from "react-router-dom";
 
 import { mainPgActions } from "../store/mainPg";
 import Main from "./Main";
+import Search from "./Search";
+import Profile from "./Profile";
 import SideBar from "./SideBar";
 import TopBar from "./TopBar";
 
@@ -103,12 +106,22 @@ const DashBoard = () => {
             <TopBar />
           </div>
           <div className="row">
-            <Main
-              animeTvData={storeAnimeTvData}
-              animeMovData={storeAnimeMovData}
-              popMovData={storePopMovData}
-              popTvData={storePopTvData}
-            />
+            <Routes>
+              <Route path="/" element={<Navigate replace to="/dashboard" />} />
+              <Route
+                path="/dashboard"
+                element={
+                  <Main
+                    animeTvData={storeAnimeTvData}
+                    animeMovData={storeAnimeMovData}
+                    popMovData={storePopMovData}
+                    popTvData={storePopTvData}
+                  />
+                }
+              />
+              <Route path="/search/:item" element={<Search />} />
+              <Route path="/profile" element={<Profile />} />
+            </Routes>
           </div>
         </div>
       </div>

@@ -1,0 +1,27 @@
+.sideBar ul {
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.sideBar li {
+  margin: 0 1rem;
+  width: 10rem;
+  line-height: 2rem;
+}
+
+.sideBar a {
+  color: white;
+  text-decoration: none;
+}
+
+.sideBar a:hover,
+.sideBar a:active,
+.sideBar a.active {
+  color: whitesmoke;
+  padding-bottom: 0.25rem;
+  border-bottom: 4px solid whitesmoke;
+}

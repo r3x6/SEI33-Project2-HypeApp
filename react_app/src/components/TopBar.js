@@ -7,7 +7,7 @@ const TopBar = () => {
         type="text"
         placeholder="Search for recently trending media...                                                                                        🔍"
       />
-      <button type="button">Surprise Me!</button>
+      <button type="button">Search</button>
     </div>
   );
 };

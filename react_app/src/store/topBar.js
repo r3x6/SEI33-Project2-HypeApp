@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const topBarSlice = createSlice({
   name: "topBar",
-  initialState: { username: "", auth: false },
+  initialState: { input: "", searchItems: [] },
   reducers: {
     login(state, action) {
       state.username = action.payload;
