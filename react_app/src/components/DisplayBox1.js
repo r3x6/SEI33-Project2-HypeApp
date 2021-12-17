@@ -1,7 +1,7 @@
 import React from "react";
 
 const DisplayBox1 = (props) => {
-  const top = props.data.filter((x) => x.rank <= 11);
+  const top = props.data.filter((x) => x.rank <= 10);
   let topList = top.map((x, index) => {
     return (
       <div className="trending">
