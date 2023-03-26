@@ -2,7 +2,7 @@
     "name": "hype-app",
     "version": "0.1.0",
     "private": true,
-    "main": "src/index.js",
+    "main": "index.js",
     "dependencies": {
         "@reduxjs/toolkit": "^1.6.2",
         "@testing-library/jest-dom": "^5.15.0",
