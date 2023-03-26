@@ -45,7 +45,8 @@
     },
     "description": "react.js front end created by Rex Chin",
     "devDependencies": {
-        "webpack": "^5.76.3"
+        "webpack": "^5.76.3",
+        "webpack-cli": "^5.0.1"
     },
     "repository": {
         "type": "git",
